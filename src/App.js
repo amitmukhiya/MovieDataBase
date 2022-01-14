@@ -29,11 +29,11 @@ function App() {
     <>
       <Router>
         <Navbar searchText={searchText} setSearchText={setSearchText} />
-        <SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/movies/:id" element={<MoreDetails/>}/>
         </Routes>
+        <SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />
       </Router>
     </>
   );
