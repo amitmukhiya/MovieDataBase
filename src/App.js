@@ -31,7 +31,7 @@ function App() {
         <Navbar searchText={searchText} setSearchText={setSearchText} />
         <SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />
         <Routes>
-          <Route exact path="/MovieDataBase" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route exact path="/movies/:id" element={<MoreDetails/>}/>
           {/* <Route exact path="/search" element={<SearchResult/>}/> */}
         </Routes>
