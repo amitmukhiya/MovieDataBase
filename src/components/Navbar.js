@@ -40,9 +40,9 @@ export default function Navbar(props) {
                 value={props.searchText}
                 onChange={text}
               />
-              <button className="btn btn-outline-success" type="submit">
+              <Link to="/search" className="btn btn-outline-success" type="submit">
                 Search
-              </button>
+              </Link>
             </form>
           </div>
         </div>

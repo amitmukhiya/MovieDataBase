@@ -7,7 +7,11 @@ export default function Home(props) {
   const name = props.movie.original_title
     ? props.movie.original_title
     : props.movie.name;
-    const detailUrl = `/movies/${props.movie.id}`;
+    let media="tv";
+    if(props.movie.media_type==="movie"){
+      media="movie"
+    }
+    const detailUrl = `/${media}/${props.movie.id}`;
   return (
     <>
     <div className="card bg-dark my-4 m-1 p-0" style={{width: '12rem'}}>

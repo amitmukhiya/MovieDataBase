@@ -11,7 +11,7 @@ const Trending = (props) => {
     : props.trend.name;
   const rate = props.trend.vote_average;
 
-  const detailUrl = `/movies/${props.trend.id}`;
+  const detailUrl = `/tv/${props.trend.id}`;
   return (
     <>
       <Link to={detailUrl} className="tile">
@@ -29,12 +29,12 @@ const Trending = (props) => {
   );
 };
 
-export default function TrendingSection() {
+export default function TrendingSectionTv() {
   const [trending, setTrending] = useState(null);
   const [word, setWord] = useState("day");
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/trending/movie/${word}?api_key=df17fa8ae0c40937fe08a2c3315df8ce`
+      `https://api.themoviedb.org/3/trending/tv/${word}?api_key=df17fa8ae0c40937fe08a2c3315df8ce`
     )
       .then((Response) => Response.json())
       .then((data) => {
@@ -48,8 +48,8 @@ export default function TrendingSection() {
   return (
     <>
       <div>
-        <div className="d-flex align-items-center my-2">
-          <h2>Trending Movies</h2>
+        <div className="d-flex align-items-center my-2 mt-5">
+          <h2>Trending Series</h2>
           <div className=" border rounded-pill border-danger mx-3">
             <button
               type="button"
@@ -61,7 +61,7 @@ export default function TrendingSection() {
             <button
               type="button"
               onClick={() => setWord("week")}
-              className=" week  btn btn-danger btn-sm rounded-pill px-4"
+              className=" week btn btn-danger btn-sm rounded-pill px-4"
             >
               This Week
             </button>

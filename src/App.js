@@ -1,11 +1,11 @@
 import "./App.css";
-// import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import SearchResult from "./components/SearchResult";
 import HomePage from "./components/HomePage";
 import MoreDetails from "./components/MoreDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TvDetails from "./components/TvDetails";
 
 function App() {
   const [movies, setMovies] = useState(null);
@@ -31,9 +31,11 @@ function App() {
         <Navbar searchText={searchText} setSearchText={setSearchText} />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/movies/:id" element={<MoreDetails/>}/>
+          <Route exact path="/movie/:id" element={<MoreDetails/>}/>
+          <Route exact path="/tv/:id" element={<TvDetails/>}/>
+          <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/>
         </Routes>
-        <SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />
+        
       </Router>
     </>
   );

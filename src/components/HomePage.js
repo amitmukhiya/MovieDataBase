@@ -2,6 +2,7 @@ import React from "react";
 import TopRated from "./TopRated";
 import TrendingSection from "./TrendingSection";
 import PopularSection from "./PopularSection"
+import TrendingSectionTv from "./TrendingSectionTv";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
     <PopularSection/>
     <TopRated/>
     <TrendingSection/>
+    <TrendingSectionTv/>
     </div>
     </>
   );
