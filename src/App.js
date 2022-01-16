@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import MoreDetails from "./components/MoreDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TvDetails from "./components/TvDetails";
+import Footer from "./components/Footer";
 
 function App() {
   const [movies, setMovies] = useState(null);
@@ -35,7 +36,7 @@ function App() {
           <Route exact path="/tv/:id" element={<TvDetails/>}/>
           <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/>
         </Routes>
-        
+        <Footer/>
       </Router>
     </>
   );

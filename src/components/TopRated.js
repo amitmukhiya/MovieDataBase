@@ -40,7 +40,7 @@ export default function TopRated() {
         setTopRated(data.results);
       });
   }, [word]);
-  console.log(topRated);
+  // console.log(topRated);
   const topRatedResults = topRated?.map((top, i) => {
     return <Toprtd top={top} key={i} word={word} />;
   });

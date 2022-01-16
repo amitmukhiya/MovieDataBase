@@ -11,7 +11,7 @@ const Trending = (props) => {
     : props.trend.name;
   const rate = props.trend.vote_average;
 
-  const detailUrl = `/movies/${props.trend.id}`;
+  const detailUrl = `/movie/${props.trend.id}`;
   return (
     <>
       <Link to={detailUrl} className="tile">
