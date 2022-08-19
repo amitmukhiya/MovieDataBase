@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
-    const text=(e)=>{
-        props.setSearchText(e.target.value)
-    }
+  const text = (e) => {
+    props.setSearchText(e.target.value);
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,9 +40,20 @@ export default function Navbar(props) {
                 value={props.searchText}
                 onChange={text}
               />
-              <Link to="/search" className="btn btn-outline-success" type="submit">
+              <Link
+                to="/search"
+                className="btn btn-outline-success"
+                type="submit"
+              >
                 Search
               </Link>
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-4">
+                <li className="nav-item">
+                  <Link to="/" className="nav-link active" aria-current="page">
+                    User
+                  </Link>
+                </li>
+              </ul>
             </form>
           </div>
         </div>
