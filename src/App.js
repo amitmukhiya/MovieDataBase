@@ -7,6 +7,8 @@ import MoreDetails from "./components/MoreDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TvDetails from "./components/TvDetails";
 import Footer from "./components/Footer";
+import Register from "./components/user/Register";
+import Login from "./components/user/Login";
 
 function App() {
   const [movies, setMovies] = useState(null);
@@ -31,10 +33,12 @@ function App() {
       <Router>
         <Navbar searchText={searchText} setSearchText={setSearchText} />
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/movie/:id" element={<MoreDetails/>}/>
-          <Route exact path="/tv/:id" element={<TvDetails/>}/>
-          <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/>
+          {/* <Route exact path="/" element={<HomePage />} /> */}
+          {/* <Route exact path="/movie/:id" element={<MoreDetails/>}/> */}
+          {/* <Route exact path="/tv/:id" element={<TvDetails/>}/> */}
+          {/* <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/> */}
+          <Route exact path="/register" element={<Register/>} ></Route>
+          <Route exact path="/login" element={<Login/>}></Route>
         </Routes>
         <Footer/>
       </Router>

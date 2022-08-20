@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="ft-main-item">
             <h2 className="ft-title">About</h2>
             <ul>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">New</a></li>
-              <li><a href="#">Latest</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="s">Services</a></li>
+              <li><a href="s">Portfolio</a></li>
+              <li><a href="s">New</a></li>
+              <li><a href="s">Latest</a></li>
+              <li><a href="s">Careers</a></li>
             </ul>
           </div>
           <div className="ft-main-item">
@@ -60,7 +60,7 @@ export default function Footer() {
           <ul className="ft-legal-list">
             <li><a href="#">Terms &amp; Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
-            <li>© 2021 Copyright Tech Axis Inc.</li>
+            <li>© 2022 Copyright Tech Axis Inc.</li>
           </ul>
         </div>
       </footer>
