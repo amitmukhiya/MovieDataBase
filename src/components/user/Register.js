@@ -10,7 +10,7 @@ export default function Register() {
     const [password1, setPassword1] = useState("");
     const registerUser = (event) => {
         event.preventDefault()
-        password === password1 ? fetch('https://mbase.netlify.app/api/register', {
+        password === password1 ? fetch('https://moviedbackend.herokuapp.com/api/register', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ export default function Login() {
     const [password, setPassword] = useState("")
     const loginUser = async (event) => {
         event.preventDefault();
-        const response = await fetch('https://mbase.netlify.app/api/login', {
+        const response = await fetch('https://moviedbackend.herokuapp.com/api/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
