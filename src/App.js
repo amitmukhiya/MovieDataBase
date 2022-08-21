@@ -33,10 +33,10 @@ function App() {
       <Router>
         <Navbar searchText={searchText} setSearchText={setSearchText} />
         <Routes>
-          {/* <Route exact path="/" element={<HomePage />} /> */}
-          {/* <Route exact path="/movie/:id" element={<MoreDetails/>}/> */}
-          {/* <Route exact path="/tv/:id" element={<TvDetails/>}/> */}
-          {/* <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/> */}
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/movie/:id" element={<MoreDetails/>}/>
+          <Route exact path="/tv/:id" element={<TvDetails/>}/>
+          <Route exact path="/search" element={<SearchResult searchText={searchText} setSearchText={setSearchText} movies={movies} setMovies={setMovies} />}/>
           <Route exact path="/register" element={<Register/>} />
           <Route exact path="/login" element={<Login/>}/>
         </Routes>
