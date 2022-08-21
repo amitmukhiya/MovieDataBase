@@ -49,7 +49,7 @@ export default function Navbar(props) {
               </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-4">
                 <li className="nav-item">
-                  <Link to="/" className="nav-link active" aria-current="page">
+                  <Link to="/register" className="nav-link active" aria-current="page">
                     User
                   </Link>
                 </li>
