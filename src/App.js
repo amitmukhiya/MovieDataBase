@@ -9,6 +9,8 @@ import TvDetails from "./components/TvDetails";
 import Footer from "./components/Footer";
 import Register from "./components/user/Register";
 import Login from "./components/user/Login";
+import { NotificationContainer } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 function App() {
   const [movies, setMovies] = useState(null);
@@ -24,13 +26,14 @@ function App() {
           // console.log(data)
           setMovies(data.results);
         });
-  }, [searchText]);
+  }, [searchText])
 
   // df17fa8ae0c40937fe08a2c3315df8ce
 
   return (
     <>
       <Router>
+      <NotificationContainer/>
         <Navbar searchText={searchText} setSearchText={setSearchText} />
         <Routes>
           <Route exact path="/" element={<HomePage />} />

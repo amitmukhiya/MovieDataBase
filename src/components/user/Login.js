@@ -1,30 +1,27 @@
 import React, { useState } from 'react'
 import "./Register.css"
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
+import authService from "../authentication/Authentication";
+import { NotificationManager } from 'react-notifications';
 
 export default function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
     const loginUser = async (event) => {
-        event.preventDefault();
-        const response = await fetch('https://moviedbackend.herokuapp.com/api/login', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                email,
-                password,
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-        if(data.status==='ok'){
-            alert('login Successful')
-        }else{
-            alert('Please check your email and password')
-        }
+        event.preventDefault()
+        // https://moviedbackend.herokuapp.com
 
+        const userData={
+            email, 
+            password
+        }
+        const res=await authService.login(userData)
+        
+        if(res.data){
+            NotificationManager.success(`Welcome ${res.data.name}`, 'Login Successful', 2000);
+            navigate('/')
+        }
     }
     return (
         <div className='register'>

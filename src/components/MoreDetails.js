@@ -22,7 +22,7 @@ export default function MoreDetails() {
       });
   }, [id]);
 
-  console.log(movieDetail);
+  // console.log(movieDetail);
   const genre = movieDetail.genres?.map((gen, i) => {
     return <Genres gen={gen} key={i} />;
   });
